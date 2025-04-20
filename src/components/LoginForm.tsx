@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
+import spotNetLogo from "@/assets/spotnet-logo.png";
 
 const LoginForm = () => {
   const [email, setEmail] = useState("");
@@ -33,6 +34,11 @@ const LoginForm = () => {
   return (
     <div className="w-full max-w-md space-y-6 p-8 glass-effect rounded-2xl animate-fade-in">
       <div className="space-y-2 text-center">
+        <img 
+          src={spotNetLogo} 
+          alt="SpotNet Labs Logo" 
+          className="mx-auto h-16 w-auto mb-4" 
+        />
         <h1 className="text-3xl font-semibold tracking-tight">SpotNet Lab Portal</h1>
         <p className="text-muted-foreground">התחבר כדי לגשת למעבדות הווירטואליות</p>
       </div>
@@ -81,3 +87,4 @@ const LoginForm = () => {
 };
 
 export default LoginForm;
+
