@@ -10,7 +10,7 @@ import {
   DrawerContent,
   DrawerTrigger,
 } from "@/components/ui/drawer";
-import spotNetLogo from "@/assets/spotnet-logo.png"; // We'll create this asset
+import spotNetLogo from "@/assets/spotnet-logo.png";
 
 const Sidebar = () => {
   const navigate = useNavigate();
@@ -19,7 +19,6 @@ const Sidebar = () => {
   const [collapsed, setCollapsed] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
 
-  // Check if mobile view
   useEffect(() => {
     const checkIfMobile = () => {
       setIsMobile(window.innerWidth < 768);
@@ -42,7 +41,6 @@ const Sidebar = () => {
     navigate("/login");
   };
 
-  // Sidebar content component - shared between desktop and mobile
   const SidebarContent = () => (
     <div className="flex flex-col h-full p-4">
       <div className="flex items-center justify-between mb-8">
@@ -85,7 +83,6 @@ const Sidebar = () => {
     </div>
   );
 
-  // Mobile view - use drawer component
   if (isMobile) {
     return (
       <>
@@ -108,7 +105,6 @@ const Sidebar = () => {
     );
   }
 
-  // Desktop view
   return (
     <div 
       className={`h-screen border-l fixed top-0 right-0 transition-all duration-300 bg-sidebar z-10 ${
