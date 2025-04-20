@@ -1,5 +1,4 @@
-
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { NavLink, useNavigate, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
@@ -11,6 +10,7 @@ import {
   DrawerContent,
   DrawerTrigger,
 } from "@/components/ui/drawer";
+import spotNetLogo from "@/assets/spotnet-logo.png"; // We'll create this asset
 
 const Sidebar = () => {
   const navigate = useNavigate();
@@ -47,7 +47,11 @@ const Sidebar = () => {
     <div className="flex flex-col h-full p-4">
       <div className="flex items-center justify-between mb-8">
         <div className={`flex items-center transition-opacity duration-300 ${collapsed ? "opacity-0 w-0" : "opacity-100"}`}>
-          <span className="text-xl font-semibold">SpotNet Labs</span>
+          <img 
+            src={spotNetLogo} 
+            alt="SpotNet Labs" 
+            className={`h-10 w-auto transition-all duration-300 ${collapsed ? "opacity-0 w-0" : "opacity-100"}`} 
+          />
         </div>
         {!isMobile && (
           <Button 

@@ -1,6 +1,7 @@
 
 import { ReactNode } from "react";
 import Sidebar from "@/components/Sidebar";
+import spotNetLogo from "@/assets/spotnet-logo.png";
 
 interface PageLayoutProps {
   children: ReactNode;
