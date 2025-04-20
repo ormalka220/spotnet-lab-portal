@@ -107,7 +107,7 @@ const Sidebar = () => {
   // Desktop view
   return (
     <div 
-      className={`h-screen border-r fixed top-0 right-0 transition-all duration-300 bg-sidebar z-10 ${
+      className={`h-screen border-l fixed top-0 right-0 transition-all duration-300 bg-sidebar z-10 ${
         collapsed ? "w-16" : "w-64"
       }`}
       dir="rtl"
